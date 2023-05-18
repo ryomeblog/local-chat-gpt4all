@@ -67,7 +67,7 @@ Done. Output file: ./gpt4all-lora-quantized-ggjt.bin
 ```
 
 
-## 3. `gpt4all-lora-quantized-ggml.bin` を `ggml` から `ggjt` にフォーマット変換する
+## 4. チャット開始
 
 1. チャットを行うコード作成
 
