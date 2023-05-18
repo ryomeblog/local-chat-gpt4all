@@ -66,7 +66,10 @@ Processing tensor b'output.weight' with shape: [32001, 4096] and type: Q4_0
 Done. Output file: ./gpt4all-lora-quantized-ggjt.bin
 ```
 
-4. チャットを行うコード作成
+
+## 3. `gpt4all-lora-quantized-ggml.bin` を `ggml` から `ggjt` にフォーマット変換する
+
+1. チャットを行うコード作成
 
 - コマンド
 ```shell:コマンド
@@ -76,7 +79,6 @@ pip install pyllamacpp==2.1.3
 touch main.py
 vi main.py
 mv 【パス】/gpt4all-lora-quantized-ggjt.bin ./gpt4all-lora-quantized-ggjt.bin
-python3 main.py
 ```
 - main.py
 ```python:main.py
@@ -106,6 +108,17 @@ Successfully installed pyllamacpp-2.1.3
 pygpt4all/pyllamacpp/gpt4all$ touch main.py
 pygpt4all/pyllamacpp/gpt4all$ vi main.py
 pygpt4all/pyllamacpp/gpt4all$ mv ../gpt4all-lora-quantized-ggjt.bin ./gpt4all-lora-quantized-ggjt.bin
+```
+
+2. 会話開始
+
+- コマンド
+```
+python3 main.py
+```
+
+- 実行例
+```
 $ python3 main.py
 ---start---
 
@@ -131,6 +144,7 @@ llama_init_from_file: kv self size  =  512.00 MB
 I'm sorry, I am an AI language model and don't have a physical form to introduce myself with. However, I can assist you with any questions or tasks you may have.
 ---end---
 ```
+
 
 ## 参考文献
 - https://github.com/nomic-ai/gpt4all
